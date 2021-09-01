@@ -8,16 +8,15 @@ import {AppService} from "../app.service";
   styleUrls: ['./commandmetrik.component.css']
 })
 export class CommandmetrikComponent implements OnInit {
-
   // @ts-ignore
   @ViewChild(BaseChartDirective)
   public chart: BaseChartDirective;
-  public radarChartLabels = ['Мининский', 'НГТУ им. Лобачевского', 'ВШЭ', 'ИТМО','НГТУ им.Р.Е. Алексеева'];
-  public radarChartData = [
-    {data: [0,0, 0, 0,0], label: 'Company team'}
+  // PolarArea
+  public polarAreaChartLabels = ['Анализ данных','Инженерия машинного обучения','Програмная инженерия','Вычислительные машины','Прикладная математика и информатика','Наука о данных','Анализ данных в биологии и медицине'];
+  public polarAreaChartData = [0,0,0,0,0,0,0];
+  public polarAreaLegend = true;
 
-  ];
-  public radarChartType = 'radar';
+  public polarAreaChartType = 'polarArea';
   public metrik:any;
   public teammetr:any;
   public dara:any;
@@ -31,6 +30,10 @@ export class CommandmetrikComponent implements OnInit {
       this.metrik = value;
       this.metrik=this.metrik.response;
       console.log(this.metrik);
+      this.chart.chart.data.datasets[0].data = this.metrik.meens;
+      this.chart.chart.data.labels = this.metrik.names;
+      this.chart.chart.update();
+
     });
 
   }

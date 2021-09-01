@@ -92,6 +92,11 @@ export class AppService {
     return userar;
   }
 
+  set_file(ids){
+    const  userar = this.http.get('https://flask-api-miriteam.herokuapp.com/deffiles?ids=');
+    return userar;
+  }
+
 
 
 }
