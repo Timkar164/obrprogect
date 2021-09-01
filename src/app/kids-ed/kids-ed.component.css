@@ -1,0 +1,32 @@
+.education{
+    margin-top: 95px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.students__title{
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 291px;
+    height: 58px;
+    color: #113079;
+    background-color: #78A9EF;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.students__pro-education{
+    cursor: pointer;
+    margin-top: 34px;
+    margin-bottom: 32px;
+}
+.flex__section{
+    display: flex;
+    flex-direction: row;
+}
+.flex__item{
+    cursor: pointer;
+    margin: 3.5px;
+}

@@ -1,0 +1,120 @@
+.students__title {
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 300px;
+    height: 58px;
+    color: #113079;
+    background-color: #78A9EF;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 65px;
+}
+
+.education {
+    margin-top: 95px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.developments__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.developments__top-input {
+    width: 481px;
+    background: #E4EEF8;
+    box-shadow: 0px 4px 4px rgba(38, 119, 189, 0.25);
+    border-radius: 10px;
+    padding: 9px 22px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #999999 !important;
+    border: none;
+    height: 44px;
+    margin-right: 26px;
+}
+
+.developments__top-dropdown {
+    width: 311px;
+    background: #E4EEF8;
+    box-shadow: 0px 4px 4px rgba(38, 119, 189, 0.25);
+    border-radius: 10px;
+    padding: 9px 22px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #999999 !important;
+    border: none;
+    height: 44px;
+}
+
+hr {
+    height: 0px;
+    width: 100%;
+    border: 1px solid #000000;
+    filter: blur(4px);
+    margin-bottom: 40px;
+}
+
+.developments__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.developments__list-item {
+    width: 324px;
+    filter: drop-shadow(0px 4px 4px rgba(38, 119, 189, 0.25));
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 52px;
+    background: #FFFFFF;
+    border: 2px solid #E4EEF8;
+    border-radius: 10px;
+}
+
+.developments__list-img {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 25px;
+}
+
+.developments__list-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.developments__list-text-blue {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #2677BD;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.developments__list-link {
+    background: #2677BD;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 30px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #FFFFFF !important;
+}

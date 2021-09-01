@@ -1,0 +1,143 @@
+.education{
+    margin-top: 95px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.students__title{
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 683px;
+    height: 58px;
+    color: #113079;
+    background-color: #78A9EF;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.flex__section{
+    
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.flex__item{
+    cursor: pointer;
+    flex: 1 1 auto;
+    margin: 0 30px;
+}
+.flex__item__title{
+    color: #383636;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+select {
+    width: 500px;
+    height: 44px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #E4EEF8;
+    box-shadow: 0px 4px 4px rgba(38, 119, 189, 0.25);
+    border-radius: 10px;
+    border: none;
+    cursor: inherit;
+
+}
+
+hr{
+    height: 0px;
+    width: 1153px;
+    border: 1px solid #000000;
+    filter: blur(4px);
+}
+
+.flex__item-institute{
+    width: 357px;
+    background-color: #E4EEF8;
+    height: 232px;
+    flex: 1 1 auto;
+    margin: 0 15px;
+    border-radius: 15px;
+}
+.flex__item-institute-title{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 36px 35px;
+    line-height: 21px;
+    color: #383636;
+}
+.flex__item-institute-descr{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 35px;
+    color: #383636;
+}
+
+.flex__item-institute-img{
+    margin-top: 10px;
+    float: right;
+}
+
+.about-institution{
+    background-color: #E4EEF8;
+    border-radius: 15px;
+    width: 1154px;
+    height: 405px;
+}
+
+
+.polyclinic__statistic {
+    width: 100%;
+    background: #D7F2F3;
+    border-radius: 10px;
+    padding: 30px 144px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 45px;
+}
+
+.polyclinic__statistic-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.polyclinic__statistic-item {
+    width: 163px;
+    height: 163px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    color: #383636;
+    margin-bottom: 18px;
+}
+
+.polyclinic__statistic-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #2677BD;
+}
+
+.programs{
+font-style: normal;
+font-weight: bold;
+margin-top: 100px;
+font-size: 36px;
+line-height: 42px;
+color: #113079;
+}

@@ -1,0 +1,37 @@
+<div class="education">
+    <img class="img__logo" src="../../assets/images/education/education_logo.svg" alt="">
+
+    <div class="search">
+        <img class="search__img" src="../../assets/images/education/search.svg" alt="">
+        <input class="search__field" name="s" placeholder="Найти" type="search">
+        <button class="search__btn" type="submit">Поиск</button>
+        <div>
+
+            <div class="education-categories">
+                <div style="background-color: #E9F6E0;" class="education-categories__section">
+                    <div [routerLink]="['', 'education_kids']" routerLinkActive="active" class="section__title">Детям</div>
+                    <div class="section__descr">
+                        Детские сады, школы, секции, кружки, курсы
+                    </div>
+                    <img src="../../assets/images/education/for_kids.png" alt="">
+                </div>
+
+                <div style="background-color: #FBEEE0;" class="education-categories__section">
+                    <div [routerLink]="['', 'education_abiturient']" routerLinkActive="active" class="section__title">Абитуриентам</div>
+                    <div class="section__descr">
+                        Вузы, колледжы, подготовка к ЕГЭ
+                    </div>
+                    <img src="../../assets/images/education/for_students.png" alt="">
+                </div>
+
+                <div style="background-color: #EBF2FC;" class="education-categories__section">
+                    <div [routerLink]="['', 'education_adults']" routerLinkActive="active" class="section__title">Взрослым</div>
+                    <div class="section__descr">
+                        Второе высшее, MBA, магистратуры, аспирантура
+                    </div>
+                    <img src="../../assets/images/education/for_adults.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
