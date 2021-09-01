@@ -141,7 +141,7 @@ export class AdultsEdCatalogComponent implements OnInit {
 
   goToInstitut(place: string){
     localStorage.setItem('selectedPlace', place);
-    this.router.navigate(['', 'education_abiturient_institut']);
+    this.router.navigate(['', 'education_adults_institut']);
   }
 
 }

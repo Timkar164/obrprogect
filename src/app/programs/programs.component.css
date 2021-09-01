@@ -1,0 +1,98 @@
+.education {
+    margin-top: 95px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.students__title {
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 683px;
+    height: 58px;
+    color: #113079;
+    background-color: #78A9EF;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.program__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.program__list-item {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.program__list-title {
+    width: 100%;
+    padding: 10px 23px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background: #2A4FA7;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.program__list-main {
+    margin-top: -15px;
+    padding: 35px 50px 20px;
+    background: #E4EEF8;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #383636;
+    z-index: 1;
+    position: relative;
+}
+
+.program__list-main--opisanie,
+.program__list-main--exams,
+.program__list-main--profession {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #383636;
+}
+
+.program__list-main--opisanie,
+.program__list-main--exams,
+.program__list-main--profession,
+.program__list-table {
+    margin-bottom: 35px;
+}
+
+.program__list-table {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.program__list-table--item {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.program__list-table--img {
+    width: 61px;
+    height: 61px;
+    margin-right: 15px;
+}
+
+.program__list-table--bold {
+    font-weight: 700;
+}

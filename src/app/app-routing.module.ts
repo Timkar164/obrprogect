@@ -37,6 +37,7 @@ import { DevelopmentsComponent } from './developments/developments.component';
 import { CommandsComponent } from './commands/commands.component';
 import { KidsAddonEdCatalogComponent } from './kids-addon-ed-catalog/kids-addon-ed-catalog.component';
 import { KidsEdCatalogComponent } from './kids-ed-catalog/kids-ed-catalog.component';
+import { ProgramsComponent } from './programs/programs.component';
 
 const metrikroutes: Routes = [
   {path:'ymetrik', component: CommandmetrikComponent},
@@ -69,6 +70,7 @@ const sysroutes: Routes = [
   {path: 'doc' , component: DocumentComponent},
   {path: 'user' , component: ProfilleComponent},
   {path: 'kalendar' , component: KalendarComponent},
+  {path: 'programs' , component: ProgramsComponent},
   
   {path:'contacts', component: KontaktsComponent},
   {path:'ymap',component: YmapComponent},

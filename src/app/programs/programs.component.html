@@ -1,0 +1,46 @@
+<div class="education">
+    <div class="students__title">Образовательные программы</div>
+
+    <ul class="program__list">
+
+        <li *ngFor="let item of institut.program" class="program__list-item">
+            <div class="program__list-title">
+                {{item.code}} {{item.name}}
+            </div>
+
+            <div class="program__list-main">
+                <p class="program__list-main--opisanie">
+                    {{item.about}}
+                </p>
+                <div class="program__list-table">
+                    <p class="program__list-table--item">
+                        <img src="../../assets/images/programs__ball.svg" alt="" class="program__list-table--img">
+                        <span class="program__list-table--bold">{{item.ball}} </span>
+                        <span *ngIf="item.ball === null" class="program__list-table--bold">Не указано </span> проходной балл
+                    </p>
+                    <p class="program__list-table--item">
+                        <img src="../../assets/images/programs__mesta.svg" alt="" class="program__list-table--img">
+                        <span class="program__list-table--text">
+                            <span class="program__list-table--bold">{{item.pipls}} </span> бюджетных мест <br>
+                        
+                        </span>
+                    </p>
+                    <p class="program__list-table--item">
+                        <img src="../../assets/images/programs__time.svg" alt="" class="program__list-table--img">
+                        <span class="program__list-table--text">
+                            <span class="program__list-table--bold">{{item.time}} </span> очная форма обучения
+                        </span>
+                    </p>
+                </div>
+                <div class="program__list-main--exams">
+                    ЕГЭ: <span *ngFor="let subject of item.predm">{{subject.name}}(мин.балл:{{subject.bal}}), </span>
+                </div>
+                <div class="program__list-main--profession">
+                    Профессии: <br>
+                    <b *ngIf="item.prof.length === 0">Не указано</b>
+                    <span *ngFor="let pro of item.prof">{{pro.name}} (з/п: от {{pro.price}}), </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

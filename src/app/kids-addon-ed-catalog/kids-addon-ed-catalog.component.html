@@ -49,16 +49,20 @@
     <div class="flex__section">
 
         <div *ngFor="let item of list" class="flex__item-institute">
-            <div class="kids-ed-catalog__item">
-                <img src="" alt="" class="flex__item-institute-images">
-            </div>
-            <div class="kids-ed-catalog__item">
-                <img src="../../assets/images/education_abiturient/pin.svg" class="flex__item-institute-img" alt="">
-                <div [routerLink]="['', 'education_abiturient_institut']" routerLinkActive="active" class="flex__item-institute-title">
-                    {{item.name}}
+            <div class="institute__wrapper">
+                <div class="kids-ed-catalog__item">
+                    <img src="" alt="" class="flex__item-institute-images">
                 </div>
-                <div class="flex__item-institute-descr">
-                    {{item.city}}, {{item.city}}, {{item.street}} {{item.home}}
+                <div class="kids-ed-catalog__item">
+                    <img src="../../assets/images/education_abiturient/pin.svg" class="flex__item-institute-img" alt="">
+                    <div [routerLink]="['', 'education_abiturient_institut']" routerLinkActive="active" class="flex__item-institute-title">
+                        {{item.name}}
+                    </div>
+                    <div class="flex__item-institute-descr">
+                        {{item.street}} {{item.home}} <br><br>
+                        Сайт: {{item.site}}
+
+                    </div>
                 </div>
             </div>
         </div>

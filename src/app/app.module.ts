@@ -45,6 +45,7 @@ import { CommandsComponent } from './commands/commands.component';
 import { KidsAddonEdCatalogComponent } from './kids-addon-ed-catalog/kids-addon-ed-catalog.component';
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProgramsComponent } from './programs/programs.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdultsInstitutComponent,
     DevelopmentsComponent,
     CommandsComponent,
-    KidsAddonEdCatalogComponent
+    KidsAddonEdCatalogComponent,
+    ProgramsComponent
 
   ],
   imports: [

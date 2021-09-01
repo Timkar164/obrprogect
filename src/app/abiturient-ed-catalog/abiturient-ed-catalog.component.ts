@@ -18,6 +18,7 @@ export class AbiturientEdCatalogComponent implements OnInit {
   nsk_file_path_spo = '../../assets/spo/spo_nsk.json';
   sm_file_path_spo = '../../assets/spo/spo_sm.json';
   msk_file_path_spo = '../../assets/spo/spo_msk.json';
+  spb_file_path_spo = '../../assets/spo/spo_spb.json';
   City: any = ['Москва', 'Нижний Новгород', 'Санкт-Петербург', 'Новосибирск', 'Самара'];
   edLevels: any = ['Высшее образование', 'Среднее профессиональное образование'];
   cityForm;
@@ -31,7 +32,8 @@ export class AbiturientEdCatalogComponent implements OnInit {
   constructor(public fb: FormBuilder, private http: HttpClient, private router: Router) { }
   ngOnInit() {
     localStorage.setItem('selectedCity', 'Нижний Новгород');
-
+    localStorage.setItem('selectedEducation', 'Высшее');
+    localStorage.setItem('selectedPlace', 'place');
     this.cityForm = this.fb.group({
       cityName: ['']
     })
@@ -72,44 +74,73 @@ export class AbiturientEdCatalogComponent implements OnInit {
     alert(JSON.stringify(this.cityForm.value))
   }
   changeCity(e) {
-    
     this.cityName.setValue(e.target.value, {
       onlySelf: true
     })
     switch(this.cityName.value) { 
       case '2: Нижний Новгород': { 
         localStorage.setItem('selectedCity', 'Нижний Новгород');
-         this.getItems(this.nn_file_path);
+        if(localStorage.getItem('selectedEducation') === 'Высшее'){
+          this.getItems(this.nn_file_path);
+        }
+        else if(localStorage.getItem('selectedEducation') === 'СПО'){
+          this.getItems(this.nn_file_path_spo);
+        }
          console.log(this.cityName.value)
          break; 
       } 
       case '1: Москва': { 
         localStorage.setItem('selectedCity', 'Москва');
-         this.getItems(this.msk_file_path);
+        if(localStorage.getItem('selectedEducation') === 'Высшее'){
+          this.getItems(this.msk_file_path);
+        }
+        else if(localStorage.getItem('selectedEducation') === 'СПО'){
+          this.getItems(this.msk_file_path_spo);
+        }
          console.log(this.cityName.value)
          break; 
       }
       case '3: Санкт-Петербург': {
-        localStorage.setItem('selectedCity', 'Санкт-Петербург'); 
-        this.getItems(this.spb_file_path);
+        localStorage.setItem('selectedCity', 'Санкт-Петербург');
+        if(localStorage.getItem('selectedEducation') === 'Высшее'){
+          this.getItems(this.spb_file_path);
+        }
+        else if(localStorage.getItem('selectedEducation') === 'СПО'){
+          this.getItems(this.spb_file_path_spo);
+        }
         console.log(this.cityName.value)
         break; 
       }
       case '4: Новосибирск': {
         localStorage.setItem('selectedCity', 'Новосибирск');
-        this.getItems(this.nsk_file_path);
+        if(localStorage.getItem('selectedEducation') === 'Высшее'){
+          this.getItems(this.nsk_file_path);
+        }
+        else if(localStorage.getItem('selectedEducation') === 'СПО'){
+          this.getItems(this.nsk_file_path_spo);
+        }
         console.log(this.cityName.value)
         break; 
       }
       case '5: Самара': {
         localStorage.setItem('selectedCity', 'Самара');
-        this.getItems(this.sm_file_path);
+        if(localStorage.getItem('selectedEducation') === 'Высшее'){
+          this.getItems(this.sm_file_path);
+        }
+        else if(localStorage.getItem('selectedEducation') === 'СПО'){
+          this.getItems(this.sm_file_path_spo);
+        }
         console.log(this.cityName.value)
         break; 
       }
       default: {
         localStorage.setItem('selectedCity', 'Нижний Новгород');
-         this.getItems(this.nn_file_path);
+        if(localStorage.getItem('selectedEducation') === 'Высшее'){
+          this.getItems(this.nn_file_path);
+        }
+        else if(localStorage.getItem('selectedEducation') === 'СПО'){
+          this.getItems(this.nn_file_path_spo);
+        }
          console.log(this.cityName.value)
          break; 
       } 
@@ -128,6 +159,75 @@ export class AbiturientEdCatalogComponent implements OnInit {
     this.edName.setValue(e.target.value, {
       onlySelf: true
     })
+    switch(this.edName.value) { 
+      case '1: Высшее образование': { 
+        localStorage.setItem('selectedEducation', 'Высшее');
+        switch(localStorage.getItem('selectedCity')) { 
+          case 'Нижний Новгород': { 
+             this.getItems(this.nn_file_path);
+             break; 
+          } 
+          case 'Москва': { 
+             this.getItems(this.msk_file_path);
+             break; 
+          }
+          case 'Санкт-Петербург': {
+            this.getItems(this.spb_file_path);
+            break; 
+          }
+          case 'Новосибирск': {
+            this.getItems(this.nsk_file_path);
+            break; 
+          }
+          case 'Самара': {
+            this.getItems(this.sm_file_path);
+            break; 
+          }
+          default: {
+            localStorage.setItem('selectedCity', 'Нижний Новгород');
+             this.getItems(this.nn_file_path);
+             break; 
+          } 
+        } 
+         break; 
+      } 
+      case '2: Среднее профессиональное образование': { 
+        localStorage.setItem('selectedEducation', 'СПО');
+        switch(localStorage.getItem('selectedCity')) { 
+          case 'Нижний Новгород': { 
+             this.getItems(this.nn_file_path_spo);
+             break; 
+          } 
+          case 'Москва': { 
+             this.getItems(this.msk_file_path_spo);
+             break; 
+          }
+          case 'Санкт-Петербург': {
+            this.getItems(this.spb_file_path_spo);
+            break; 
+          }
+          case 'Новосибирск': {
+            this.getItems(this.nsk_file_path_spo);
+            break; 
+          }
+          case 'Самара': {
+            this.getItems(this.sm_file_path_spo);
+            break; 
+          }
+          default: {
+            localStorage.setItem('selectedCity', 'Нижний Новгород');
+             this.getItems(this.nn_file_path_spo);
+             break; 
+          } 
+        } 
+         break; 
+      }
+      default: {
+        localStorage.setItem('selectedEducation', 'Высшее');
+         this.getItems(this.nn_file_path);
+         break; 
+      } 
+    } 
   }
   get edName() {
     return this.educationForm.get('edName');
@@ -138,8 +238,9 @@ export class AbiturientEdCatalogComponent implements OnInit {
     this.list = pageOfItems;
   }
 
-  goToInstitut(place: string){
+  goToInstitut(place){
     localStorage.setItem('selectedPlace', place);
+    localStorage.setItem('place', JSON.stringify(place));
     this.router.navigate(['', 'education_abiturient_institut']);
   }
 

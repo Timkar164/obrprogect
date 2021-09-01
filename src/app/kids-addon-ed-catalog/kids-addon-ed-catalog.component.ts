@@ -58,7 +58,7 @@ export class KidsAddonEdCatalogComponent implements OnInit {
     this.educationForm = this.fb.group({
       edName: ['']
     })
-    this.http.get('http://localhost:8000/get_clubs').subscribe((data: any)=>{
+    this.http.get('../../assets/kids_clubs.json').subscribe((data: any)=>{
       this.list = data.items;
       console.log(data.items)
     })

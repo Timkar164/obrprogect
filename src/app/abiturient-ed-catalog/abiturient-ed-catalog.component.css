@@ -61,11 +61,15 @@ hr {
 
 .flex__item-institute {
     width: auto;
-    background-color: #E4EEF8;
+    background-image: url('../../assets/images/catalog-bg.png');
+    background-repeat: repeat-x;
+    background-size: contain;
     flex: 1 1 auto;
-    border-radius: 15px;
     display: flex;
-    padding: 20px;
+    padding: 40px 0;
+    border: 2px solid #E4EEF8;
+    filter: drop-shadow(0px 4px 4px rgba(38, 119, 189, 0.25));
+    border-radius: 15px;
 }
 
 .flex__item-institute-title {
@@ -74,7 +78,7 @@ hr {
     font-size: 18px;
     margin: 36px 35px 36px 0;
     line-height: 21px;
-    color: #383636;
+    color: #ffffff;
 }
 
 .flex__item-institute-descr {
@@ -82,12 +86,13 @@ hr {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    color: #383636;
+    color: #ffffff;
 }
 
 .flex__item-institute-img {
     margin-top: 10px;
     float: right;
+    color: #ffffff;
 }
 
 .flex__item-institute-images {
@@ -98,4 +103,11 @@ hr {
 
 .ab-ed-catalog__item:nth-child(2) {
     width: 100%;
+}
+
+.institute__wrapper {
+    width: 100%;
+    background: rgba(120, 169, 239, 0.81);
+    display: flex;
+    padding: 15px 35px;
 }

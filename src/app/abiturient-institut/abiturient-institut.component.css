@@ -23,6 +23,7 @@
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+    padding: 15px;
 }
 
 .flex__item {
@@ -99,40 +100,42 @@ hr {
 
 .polyclinic__statistic {
     width: 100%;
-    background: #D7F2F3;
-    border-radius: 10px;
-    padding: 30px 144px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto 45px;
+    padding: 30px;
+    margin: 40px auto;
 }
 
 .polyclinic__statistic-list {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .polyclinic__statistic-item {
     width: 163px;
     height: 163px;
-    background: #FFFFFF;
+    background: #78A9EF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     text-align: center;
     padding: 30px 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 25px;
-    color: #383636;
-    margin-bottom: 18px;
+    color: #113079;
+    margin: 15px;
+}
+
+.polyclinic__statistic-item a {
+    padding: 0;
+    margin: 0;
 }
 
 .polyclinic__statistic-title {
     font-weight: 700;
     font-size: 48px;
     line-height: 65px;
-    color: #2677BD;
+    color: #FFFFFF;
 }
 
 .programs {

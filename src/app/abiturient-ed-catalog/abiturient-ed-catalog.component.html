@@ -48,17 +48,24 @@
     <hr>
     <div *ngFor="let item of list; let i = index" class="flex__section">
         <div class="flex__item-institute">
-            <div class="ab-ed-catalog__item">
-                <img src="" alt="" class="flex__item-institute-images">
-            </div>
-            <div class="ab-ed-catalog__item">
-                <img src="../../assets/images/education_abiturient/pin.svg" class="flex__item-institute-img" alt="">
-                <div (click)="goToInstitut(item.name)" class="flex__item-institute-title">
-                    {{item.name}}
+            <div class="institute__wrapper">
+                <div class="ab-ed-catalog__item">
+                    <img src="{{item.img}}" alt="" class="flex__item-institute-images">
                 </div>
-                <div class="flex__item-institute-descr">
-                    проходной балл: <b style="text-decoration: underline;">от 84</b> <br> бюджетеных мест: <b style="text-decoration: underline;">{{item.budjet_places}}</b> <br> образовательных программ: <b *ngIf="item.program.length != 0" style="text-decoration: underline;">{{item.program.length}}</b>
-                    <b *ngIf="item.program.length === 0" style="text-decoration: underline;">Не указано</b><br>
+                <div class="ab-ed-catalog__item">
+                    <img src="../../assets/images/education_abiturient/pin.svg" class="flex__item-institute-img" alt="">
+                    <div (click)="goToInstitut(item)" class="flex__item-institute-title">
+                        {{item.name}}
+                    </div>
+                    <div class="flex__item-institute-descr">
+                        
+                        <br> бюджетеных мест:
+                        <b style="text-decoration: underline; color:#383636">{{item.budjet_places}}</b>
+                        <b *ngIf="item.budjet_places == 0" style="text-decoration: underline; color:#383636"> (Не указано)</b>
+                        <br> образовательных программ:
+                        <b *ngIf="item.program.length != 0" style="text-decoration: underline; color:#383636">{{item.program.length}}</b>
+                        <b *ngIf="item.program.length === 0" style="text-decoration: underline; color:#383636">Не указано</b><br>
+                    </div>
                 </div>
             </div>
         </div>
