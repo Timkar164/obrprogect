@@ -1,11 +1,11 @@
-.education{
+.education {
     margin-top: 95px;
     box-sizing: border-box;
     margin: 0 auto;
     width: 85%;
 }
 
-.students__title{
+.students__title {
     border-radius: 10px;
     padding: 5px;
     text-align: center;
@@ -17,16 +17,27 @@
     font-weight: bold;
 }
 
-.students__pro-education{
+.students__pro-education {
     cursor: pointer;
     margin-top: 34px;
     margin-bottom: 32px;
+    width: 100%;
 }
-.flex__section{
+
+.flex__section {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    width: 100%;
 }
-.flex__item{
+
+.flex__item {
     cursor: pointer;
     margin: 3.5px;
+    width: 50%;
+}
+
+img {
+    width: 100%;
 }

@@ -1,11 +1,11 @@
-.education{
+.education {
     margin-top: 95px;
     box-sizing: border-box;
     margin: 0 auto;
     width: 85%;
 }
 
-.students__title{
+.students__title {
     border-radius: 10px;
     padding: 5px;
     text-align: center;
@@ -17,24 +17,28 @@
     font-weight: bold;
 }
 
-.flex__section{
-    
+.flex__section {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
-.flex__item{
+
+.flex__item {
     cursor: pointer;
     margin: 3.5px;
+    width: 50%;
 }
-.flex__item__title{
+
+.flex__item__title {
     color: #383636;
     font-size: 22px;
     font-weight: bold;
 }
 
 select {
-    width: 500px;
+    width: 100%;
     height: 44px;
     font-size: 18px;
     border: 2px solid #ccc;
@@ -46,42 +50,52 @@ select {
     border-radius: 10px;
     border: none;
     cursor: inherit;
-
 }
 
-hr{
+hr {
     height: 0px;
-    width: 1153px;
+    width: 100%;
     border: 1px solid #000000;
     filter: blur(4px);
 }
 
-.flex__item-institute{
-    width: 357px;
+.flex__item-institute {
+    width: auto;
     background-color: #E4EEF8;
-    height: 232px;
     flex: 1 1 auto;
-    margin: 0 15px;
     border-radius: 15px;
+    display: flex;
+    padding: 20px;
 }
-.flex__item-institute-title{
+
+.flex__item-institute-title {
     font-weight: bold;
     cursor: pointer;
     font-size: 18px;
-    margin: 36px 35px;
+    margin: 36px 35px 36px 0;
     line-height: 21px;
     color: #383636;
 }
-.flex__item-institute-descr{
+
+.flex__item-institute-descr {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    margin-left: 35px;
     color: #383636;
 }
 
-.flex__item-institute-img{
+.flex__item-institute-img {
     margin-top: 10px;
     float: right;
+}
+
+.flex__item-institute-images {
+    width: 200px;
+    min-height: 200px;
+    margin: 10px 20px;
+}
+
+.ab-ed-catalog__item:nth-child(2) {
+    width: 100%;
 }

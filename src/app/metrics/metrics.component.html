@@ -11,6 +11,29 @@
 
             <div class="students__title">Оценка</div>
             <input type="file" id="file" multiple (change)="getFileDetails($event)">
+
+            <div class="flex__item">
+                <div class="flex__item__title">
+                    Высшее учебное заведение:
+                </div>
+                <form [formGroup]="unicForm" (ngSubmit)="onSubmit()">
+                    <div class="group-gap">
+                        <div class="d-block my-3">
+                            <div class="mb-3">
+                                <select class="custom-select" (change)="changeUnic($event)" formControlName="unicName">
+                                <option value="">Выберите ВУЗ:</option>
+                                <option *ngFor="let unic of Unic" [ngValue]="unic">{{unic}}</option>
+                             </select>
+                                <!-- error block -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit Button -->
+                </form>
+                <!-- Form ends -->
+            </div>
+
             <p> Выбирите таксономию</p>
 
             <button (click)="changetaks(1)">AR</button>

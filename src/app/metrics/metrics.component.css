@@ -262,3 +262,29 @@ td {
     font-weight: bold;
     margin-bottom: 65px;
 }
+
+.flex__item {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.flex__item__title {
+    color: #383636;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+select {
+    width: 500px;
+    height: 44px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #E4EEF8;
+    box-shadow: 0px 4px 4px rgba(38, 119, 189, 0.25);
+    border-radius: 10px;
+    border: none;
+    cursor: inherit;
+}

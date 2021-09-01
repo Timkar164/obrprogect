@@ -1,60 +1,67 @@
 <div class="education">
     <div class="students__title">Детям / Каталог образования</div>
-     <div class="flex__section2">
-         <div class="flex__item">
+    <div class="flex__section2">
+        <div class="flex__item">
             <div class="flex__item__title">
                 Город:
             </div>
             <form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
                 <div class="group-gap">
-                   <div class="d-block my-3">
-                      <div class="mb-3">
-                         <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
+                    <div class="d-block my-3">
+                        <div class="mb-3">
+                            <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
                             <option value="">Выберите город:</option>
                             <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                          </select>
-                         <!-- error block -->
-                      
-                      </div>
-                   </div>
+                            <!-- error block -->
+
+                        </div>
+                    </div>
                 </div>
                 <!-- Submit Button -->
-                </form><!-- Form ends -->
-         </div>
+            </form>
+            <!-- Form ends -->
+        </div>
 
-         <div class="flex__item" style="margin-left: 141px;">
+        <div class="flex__item" style="margin-left: 141px;">
             <div class="flex__item__title">
                 Уровень образования:
             </div>
             <form [formGroup]="educationForm" (ngSubmit)="onSubmit2()">
                 <div class="group-gap">
-                   <div class="d-block my-3">
-                      <div class="mb-3">
-                         <select class="custom-select" (change)="changeEducation($event)" formControlName="edName">
+                    <div class="d-block my-3">
+                        <div class="mb-3">
+                            <select class="custom-select" (change)="changeEducation($event)" formControlName="edName">
                             <option value="">Выберите образование:</option>
                             <option *ngFor="let ed of edLevels" [ngValue]="ed">{{ed}}</option>
                          </select>
-                         <!-- error block -->
-                         
-                      </div>
-                   </div>
+                            <!-- error block -->
+
+                        </div>
+                    </div>
                 </div>
                 <!-- Submit Button -->
-                </form><!-- Form ends -->
-         </div>
-     </div>
-     <hr>
-     <div class="flex__section">
+            </form>
+            <!-- Form ends -->
+        </div>
+    </div>
+    <hr>
+    <div class="flex__section">
         <div *ngFor="let item of list" class="flex__item-institute">
-            <img src="../../assets/images/education_abiturient/pin.svg" class="flex__item-institute-img" alt="">
-            <div [routerLink]="['', 'education_abiturient_institut']" routerLinkActive="active" class="flex__item-institute-title">
-                {{item.name}}  
+            <div class="kids-ed-catalog__item">
+                <img src="../../assets/" alt="" class="flex__item-institute-images">
             </div>
-            <div class="flex__item-institute-descr">
-                {{item.address}} <br>
-                Телефон: {{item.phone_number}}
+            <div class="kids-ed-catalog__item">
+                <img src="../../assets/images/education_abiturient/pin.svg" class="flex__item-institute-img" alt="">
+                <div [routerLink]="['', 'education_abiturient_institut']" routerLinkActive="active" class="flex__item-institute-title">
+                    {{item.name}}
+                </div>
+                <div class="flex__item-institute-descr">
+                    {{item.address}} <br> Телефон: {{item.phone_number}}
+                </div>
             </div>
+
         </div>
 
-     </div>
+    </div>
 </div>

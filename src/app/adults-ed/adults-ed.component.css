@@ -21,14 +21,23 @@
     cursor: pointer;
     margin-top: 34px;
     margin-bottom: 32px;
+    width: 100%;
 }
 
 .flex__section {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .flex__item {
     cursor: pointer;
     margin: 3.5px;
+    width: 50%;
+}
+
+img {
+    width: 100%;
 }

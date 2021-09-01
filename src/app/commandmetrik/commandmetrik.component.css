@@ -1,0 +1,25 @@
+.cmetrik__itogo {
+    width: 100%;
+    border: 1px solid #337ab7;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cmetrik__itogo-title {
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #ffffff;
+    width: 100%;
+    display: inline-block;
+}
+
+.cmetrik__itogo-text {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 80%;
+    display: inline-block;
+}
+
+.cmetrik__itogo-text-bold {
+    font-weight: 700;
+}

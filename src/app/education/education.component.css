@@ -24,6 +24,7 @@
     height: 56px;
     background-color: #2E8EE1;
     border: solid 1px #2E8EE1;
+    padding-left: 45px;
 }
 
 .search__btn {
@@ -78,18 +79,21 @@ input:-moz-placeholder {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    padding: 0 20px;
 }
 
 .education-categories__section {
-    width: 375px;
+    width: 33%;
     border-radius: 10px;
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 30px;
 }
 
 .education-categories__section img {
     margin: 0 auto;
     display: block;
+    width: 100%;
 }
 
 .section__title {
