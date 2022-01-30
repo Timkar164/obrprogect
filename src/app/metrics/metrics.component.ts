@@ -63,7 +63,7 @@ export class MetricsComponent implements OnInit {
       frmData.append("fileUpload", this.myFiles[i]);
     }
 
-    this.httpService.post('https://flask-api-miriteam.herokuapp.com//files', frmData).subscribe(
+    this.httpService.post('https://flask-api-miriteam.herokuapp.com/files', frmData).subscribe(
       value => {
         // SHOW A MESSAGE RECEIVED FROM THE WEB API.
         console.log(value);
@@ -81,7 +81,7 @@ export class MetricsComponent implements OnInit {
     this.isFile=true;
   }
   changetaks(taks){
-    this.httpService.get('https://flask-api-miriteam.herokuapp.com//settaks?taks='+taks).subscribe(value => {
+    this.httpService.get('https://flask-api-miriteam.herokuapp.com/settaks?taks='+taks).subscribe(value => {
       console.log(value);
     })
   }
@@ -163,7 +163,7 @@ export class MetricsComponent implements OnInit {
         this.isPlay=false;
         this.isFile = false;
         console.log(vuz);
-        this.httpService.get('https://flask-api-miriteam.herokuapp.com//deffiles?ids='+vuz).subscribe(value => {
+        this.httpService.get('https://flask-api-miriteam.herokuapp.com/deffiles?ids='+vuz).subscribe(value => {
           console.log(value);
           this.isFile = true;
           this.isPlay = true;
